@@ -12,13 +12,13 @@ export default function WeatherForecastPreview(props) {
   function maxTemperature() {
     let temperature = Math.round(props.data.temperature.maximum);
 
-    return `${temperture}°`;
+    return `${temperature}°`;
   }
 
   function minTemperature() {
     let temperature = Math.round(props.data.temperature.minimum);
 
-    return `${temperture}°`;
+    return `${temperature}°`;
   }
 
   return (
@@ -31,4 +31,4 @@ export default function WeatherForecastPreview(props) {
       </div>
     </div>
   );
-
+}
