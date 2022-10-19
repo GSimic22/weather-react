@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import WeatherInfo from "./WeatherInfo";
+import WeatherForecast from "./WeatherForecast";
 import axios from "axios";
 import "./Weather.css";
 
@@ -10,6 +11,7 @@ export default function Weather(props) {
   function handleResponse(response) {
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       humidity: response.data.temperature.humidity,
       date: new Date(response.data.time * 1000),
@@ -43,12 +45,11 @@ export default function Weather(props) {
               <input
                 type="search"
                 placeholder="Enter a City"
-                className="form-control"
-                autoFocus="on"
+                className="form-control search-input"
                 onChange={handleCityChange}
               />
             </div>
-            <div className="col-3">
+            <div className="col-3 p=0">
               <input
                 type="submit"
                 value="Search"
@@ -58,7 +59,23 @@ export default function Weather(props) {
           </div>
         </form>
         <WeatherInfo data={weatherData} />
-        <div />
+        <WeatherForecast
+          coordinates={weatherData.coordiante}
+          city={weatherData.city}
+        />
+
+        <footer>
+          This project was coded by Gillian Simic and is{" "}
+          <a
+            href="https://github.com/GSimic22/weather-react"
+            target="_blank"
+            rel="noreferrer"
+            className="footer"
+          >
+            {" "}
+            open-sourced on Git-Hub.
+          </a>
+        </footer>
       </div>
     );
   } else {
