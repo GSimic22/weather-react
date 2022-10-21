@@ -1,6 +1,6 @@
 .Weather {
   font-family: "Cerebri-Sans", Helvetica, sans-serif;
-  background: white;
+  background: #EEE5DD;
   border-radius: 16px;
   box-shadow: 0px 30px 50px rgba(65, 50, 100, 0.08);
   padding: 40px;
@@ -14,7 +14,7 @@
 }
 
 .Weather search-input {
-  background: #f9f7fe;
+  background: #EEE5DD7;
   border: none;
   padding: 15px 20px;
   display: inline-block;
