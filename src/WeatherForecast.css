@@ -9,14 +9,14 @@
   font-size: 16px;
   line-height: 20px;
   text-align: center;
-  color: rgba(39, 33, 66, 0.4);
+  color: rgb(30, 61, 115);
 }
 
 .WeatherForecast .forecast-temperature {
   font-style: normal;
   font-size: 18px;
   line-height: 1.5;
-  color:#DDD1E1;
+  color:#1E3D73;
   font-weight: bold;
 }
 
